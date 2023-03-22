@@ -19,12 +19,3 @@ export default function BlogRoutes() {
     </BrowserRouter>
   );
 }
-
-// ● Listagem de posts:
-// o https://jsonplaceholder.typicode.com/posts
-// ● Listagem de comentários de um post:
-// o https://jsonplaceholder.typicode.com/posts/[ID]/comments
-// ● Listagem de usuários:
-// o https://jsonplaceholder.typicode.com/users
-// ● Detalhes de um usuário:
-// o https://jsonplaceholder.typicode.com/users/[ID]
