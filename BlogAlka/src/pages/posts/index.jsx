@@ -7,7 +7,7 @@ export default function Posts() {
       `https://jsonplaceholder.typicode.com/posts?_page=${page}`
     );
     const data = await response.json();
-    console.log(data);
+    setPosts(data);
   }
   function prevPage() {
     page > 1 ? setPage(page - 1) : null;
@@ -23,6 +23,16 @@ export default function Posts() {
   return (
     <>
       <h1>AQUI EU VOU TER TODOS OS POSTS</h1>
+      {posts.map((post) => {
+        return (
+          <div key={post.id}>
+            Post Title:<div> {post.title}</div>
+            Post Body:<div> {post.body}</div>
+            Post ID:<a href={`/postInfo/${post.id}`}> {post.id}</a>
+            User:<a href={`/userInfo/${post.userId}`}> {post.userId}</a>
+          </div>
+        );
+      })}
       <button onClick={prevPage}>PREV</button>
       <button onClick={nextPage}>NEXT</button>
     </>
