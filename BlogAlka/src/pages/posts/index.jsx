@@ -47,12 +47,12 @@ export default function Posts() {
               >
                 Comments
               </Link>
-              <a
-                href={`/userInfo/${post.userId}`}
+              <Link
+                to={`/userInfo/${post.userId}`}
                 className="hover:opacity-50 rounded-md bg-emerald-200 p-2 m-2 font-bold"
               >
                 Posted by user: {post.userId}
-              </a>
+              </Link>
             </div>
           </div>
         );

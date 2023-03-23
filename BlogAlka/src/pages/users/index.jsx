@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function UsersList() {
   const [users, setUsers] = useState([]);
@@ -28,8 +29,8 @@ export default function UsersList() {
       <h1 className="text-4xl mt-5">USERS</h1>
       {users.map((user) => {
         return (
-          <a
-            href={`/userInfo/${user.id}`}
+          <Link
+            to={`/userInfo/${user.id}`}
             className="flex flex-col items-center bg-gradient-to-r from-emerald-200 to-cyan-200 w-2/5 p-4 rounded-md hover:scale-105 hover:transition-all text-xl max-sm:w-screen"
             key={user.id}
           >
@@ -39,7 +40,7 @@ export default function UsersList() {
               <div>User: {user.username}</div>
               <div>E-mail: {user.email}</div>
             </div>
-          </a>
+          </Link>
         );
       })}
       <div className="flex gap-8">
