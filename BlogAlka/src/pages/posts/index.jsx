@@ -42,14 +42,14 @@ export default function Posts() {
             <div className="flex gap-4 items-center">
               <Link
                 to={`/postInfo/${post.id}`}
-                className="hover:opacity-50 rounded-md bg-emerald-200 p-2 m-2 font-bold"
+                className="hover:opacity-50 rounded-md bg-emerald-200 p-2 m-2 font-bold "
                 state={{ from: "posts", post: `${post.body}` }}
               >
                 Comments
               </Link>
               <Link
                 to={`/userInfo/${post.userId}`}
-                className="hover:opacity-50 rounded-md bg-emerald-200 p-2 m-2 font-bold"
+                className="hover:opacity-50 rounded-md bg-emerald-200 p-2 m-2 font-bold "
               >
                 Posted by user: {post.userId}
               </Link>

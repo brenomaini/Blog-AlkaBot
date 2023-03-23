@@ -31,7 +31,7 @@ export default function UsersList() {
         return (
           <Link
             to={`/userInfo/${user.id}`}
-            className="flex flex-col items-center bg-gradient-to-r from-emerald-200 to-cyan-200 w-2/5 p-4 rounded-md hover:scale-105 hover:transition-all text-xl max-sm:w-screen"
+            className="flex flex-col items-center bg-gradient-to-r from-emerald-200 to-cyan-200 w-2/5 p-4 rounded-md hover:scale-105 hover:transition-all text-xl max-sm:w-screen "
             key={user.id}
           >
             <div>
