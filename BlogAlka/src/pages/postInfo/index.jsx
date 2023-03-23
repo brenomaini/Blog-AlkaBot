@@ -21,22 +21,22 @@ export default function PostInfo() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center  gap-8 w-full p-20">
+    <div className="flex flex-col items-center justify-center  gap-8 w-full p-20 max-sm:w-screen">
       <h1 className="text-4xl mt-5">POST</h1>
-      <div className="flex flex-col justify-center items-center border border-emerald-400 w-2/4 h-36 p-8 rounded-md">
+      <div className="flex flex-col justify-center items-center border border-emerald-400 w-2/4 h-36 p-8 rounded-md max-sm:w-screen">
         {locationStates.post}
       </div>
       <hr className="h-8 w-full"></hr>
       <h2 className="text-4xl mt-5">COMMENTS</h2>
-      <div className="flex flex-col justify-center items-center w-full gap-2">
+      <div className="flex flex-col justify-center items-center w-full gap-2 max-sm:w-screen max-sm:gap-8">
         {postInfo.map((comment) => {
           return (
             <div
               key={comment.id}
-              className="flex flex-col justify-center items-center p-8 w-3/4 border border-slate-700 rounded-md"
+              className="flex flex-col justify-center items-center p-8 w-3/4 border border-slate-700 rounded-md max-sm:w-screen"
             >
               Comment:
-              <div className="flex flex-col justify-center items-center border border-emerald-400 w-2/4 h-36 p-2 rounded-md m-2">
+              <div className="flex flex-col justify-center items-center border border-emerald-400 bg-emerald-200 w-2/4 h-36 p-2 rounded-md m-2 max-sm:w-screen">
                 {comment.body}
               </div>
               <div>Comment ID: {comment.id}</div>

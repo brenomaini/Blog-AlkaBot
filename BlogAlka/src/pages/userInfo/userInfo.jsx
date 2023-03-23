@@ -20,8 +20,10 @@ export default function UserInfo() {
   return (
     <>
       {user != "" ? (
-        <div className="flex flex-col items-center gap-8 p-20">
-          <h1 className="text-4xl mt-5 italic underline">{user.name}</h1>
+        <div className="flex flex-col items-center gap-8 p-20 max-sm:">
+          <h1 className="text-4xl mt-5 italic underline max-sm:text-2xl">
+            {user.name}
+          </h1>
           <div className="flex flex-col gap-2">
             <div>
               <span className="font-bold">Name:</span> {user.name}

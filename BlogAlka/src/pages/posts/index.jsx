@@ -22,18 +22,21 @@ export default function Posts() {
   }, [page]);
 
   return (
-    <div className="flex flex-col justify-center items-center gap-8 p-20">
+    <div className="flex flex-col justify-center items-center gap-8 p-20 max-sm:w-full">
       <h1 className="text-4xl mt-5">POSTS</h1>
       {posts.map((post) => {
         return (
           <div
             key={post.id}
-            className="flex flex-col justify-center items-center border border-emerald-400 w-2/4 gap-4 rounded-md"
+            className="flex flex-col justify-center items-center border border-emerald-400 w-2/4 gap-4 rounded-md max-sm:gap-1 max-sm:w-screen max-sm:p-4"
           >
             <span className="font-bold">TITLE</span>
-            <span className="underline italic"> {post.title}</span>
+            <span className="underline italic max-sm:text-xs">
+              {" "}
+              {post.title}
+            </span>
             <span className="font-bold">POST</span>
-            <span className="text-lg text-center bg-gradient-to-r from-emerald-400 to-cyan-200 p-4">
+            <span className="text-lg text-center bg-gradient-to-r from-emerald-400 to-cyan-200 p-4 max-sm:text-base">
               {post.body}
             </span>
             <div className="flex gap-4 items-center">
